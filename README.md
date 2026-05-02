@@ -45,3 +45,16 @@ The POST request stores the returned `id` into an environment variable:
 ```javascript
 const json = pm.response.json();
 pm.environment.set("postId", json.id);
+
+⚠️ Important: Why Some Tests Fail
+JSONPlaceholder is a mock API, not a real backend.
+It does not save, update, or delete data, even though it returns successful status codes.
+
+✔ JSONPlaceholder pretends to:
+Create a post (always returns id: 101)
+
+Update a post
+
+Patch a post
+
+Delete a post
